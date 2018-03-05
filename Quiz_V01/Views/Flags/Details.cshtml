@@ -1,0 +1,44 @@
+﻿@model Quiz_V01.Models.Flag
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div class="container">
+    <h4>Flag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagUrl)<br/>
+            <img src="@Url.Content(Model.FlagUrl)" width="100px" height="auto"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFlag }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
