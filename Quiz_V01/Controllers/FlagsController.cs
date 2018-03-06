@@ -19,6 +19,8 @@ namespace Quiz_V01.Controllers
     {
         private static Random rd = new Random();
 
+        string[] countries = {"Brasil","Canadá","China","Estados Unidos","França","Israel","Itália","Ruanda","Coréia do Sul","Inglaterra"};
+
         string json = @"[
     {
       'flagId': 1,
